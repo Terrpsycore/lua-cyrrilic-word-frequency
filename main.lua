@@ -2,7 +2,7 @@ os.setlocale('Russian_Russia.1251')
 
 local path = 'input.txt'
 local input = io.open(path, "r")
--- Очистка текста от цифр и знаков препинания (кроме дефисов являющихся частью слова)
+-- Deleting all numbers and punctuation marks except word-part hyphens
 local text = input:read("*a"):gsub('[,.?!)(:"%d]', ' '):gsub("%s+-", " "):gsub("-%s+", " ")
 local frequency = {}
 local words = {}
